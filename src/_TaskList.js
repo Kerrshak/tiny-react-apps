@@ -1,24 +1,20 @@
-function TaskList({tasks, callback}) {
-
-
-
+function TaskList({listItems, setListItems}) {
+    function handleCheck(index){
+        let tempList = [...listItems]
+        tempList[index].done = !tempList[index].done
+        setListItems(tempList)
+    }
     return <div>
         <ul>
-            {tasks.map((task, index) => {
-                const handleClick = () => {
-                    callback(() => {
-                        return tasks.map((task, checkIndex) => {
-                            if(index === checkIndex) {
-                                return {task: task.task, done: !task.done}
-                            } else return {task: task.task, done: task.done}
-                        })})
-                }
-
-                if(task.done){
-                    return <li key={`${index}`}><input className="checkbox" type="checkbox" defaultChecked onClick={handleClick}/>{task.task}{`${task.done}`}</li>
-                }else{
-                    return <li key={`${index}`}><input className="checkbox" type="checkbox" onClick={handleClick}/>{task.task}{`${task.done}`} </li>
-                }
+            {listItems.map((task, index) => {
+                return (
+                    <li key={`${index}`}>
+                        <input className="checkbox"
+                        checked={task.done}
+                        type="checkbox"
+                        onChange={() => handleCheck(index)}/>
+                    {task.task}</li>
+                )
             })}
         </ul>
     </div>
