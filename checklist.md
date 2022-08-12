@@ -14,7 +14,7 @@
             [X]add button beside input
             [X]takes data and adds it to a state
         [ ]Remove item from list
-            [ ]Clear list
+            [X]Clear list
             [ ]CHALLENGE
                 [ ]Remove individual items via a checkbox selector
             
