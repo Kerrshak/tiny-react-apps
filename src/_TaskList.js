@@ -4,6 +4,11 @@ function TaskList({listItems, setListItems}) {
         tempList[index].done = !tempList[index].done
         setListItems(tempList)
     }
+
+    function RemoveItem(index){
+        setListItems(listItems.filter((task, currIndex) => index !==currIndex))
+    }
+
     return <div>
         <ul>
             {listItems.map((task, index) => {
@@ -13,7 +18,7 @@ function TaskList({listItems, setListItems}) {
                         checked={task.done}
                         type="checkbox"
                         onChange={() => handleCheck(index)}/>
-                    {task.task}</li>
+                    {task.task}<button onClick={() => RemoveItem(index)}>Remove</button> </li>
                 )
             })}
         </ul>
