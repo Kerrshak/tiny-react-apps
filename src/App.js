@@ -4,7 +4,7 @@ import ListGenerator from './_ListGenerator'
 
 function App() {
   return (
-    <div>
+    <div id="ourContent">
       <WelcomePage/>
       <ListGenerator/>
     </div>

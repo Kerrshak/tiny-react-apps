@@ -19,7 +19,7 @@ const TaskAdder = ({setListItems}) => {
     
     return <div>
         <form onSubmit={handleSubmit}>
-            <label htmlFor="task-input">Task </label>
+            <label htmlFor="task-input">Task: </label>
             <input 
                 onChange={handleChange}
                 id= "task-input"

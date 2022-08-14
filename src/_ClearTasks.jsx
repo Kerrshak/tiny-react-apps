@@ -1,7 +1,7 @@
 const ClearTasks = ({setListItems}) => {
     const clearAllTasks = () => setListItems([])
 
-    return <button onClick={clearAllTasks}>Clear</button>
+    return <button id="clear-button" onClick={clearAllTasks}>Clear</button>
 }
 
 export default ClearTasks
