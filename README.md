@@ -1,5 +1,11 @@
 # Getting Started with Create React App
 
+li {
+  width: 100%;
+  border: 2px solid green;
+  display: flex;
+}
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

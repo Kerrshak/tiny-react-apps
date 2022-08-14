@@ -5,16 +5,19 @@ import ClearTasks from './_ClearTasks'
 
 const ListGenerator = () => {
     const [listItems, setListItems] = useState([
-        {task: "Go on a run", done: false}, 
-        {task: "Go on another run", done: true}, 
-        {task: "Go on a long run", done: false}
+        {task: "Watch Shrek", done: true}, 
+        {task: "Watch Shrek 2", done: false}, 
+        {task: "Rewatch Shrek", done: false},
+        {task: "Bin Scared Shrekless", done: true}
     ])
         
     return <main>
         <TaskAdder setListItems={setListItems}/>
-        <h2>Outstanding tasks</h2>
-        <ClearTasks setListItems={setListItems}/>
-        <TaskList listItems={listItems} setListItems={setListItems}/>        
+        <div id="bottom-box">
+            <h3>Outstanding tasks</h3>
+            <ClearTasks setListItems={setListItems}/>
+            <TaskList listItems={listItems} setListItems={setListItems}/>        
+        </div>
     </main>
 }
 
